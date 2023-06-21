@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         关闭允许广告弹窗
 // @namespace    https://icexmoon.cn/
-// @version      0.1
+// @version      0.2
 // @description  用于关闭 baeldung.com 频繁出现的要求允许广告弹窗
 // @author       icexmoon@qq.com
 // @license      MIT
