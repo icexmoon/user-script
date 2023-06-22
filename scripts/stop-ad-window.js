@@ -9,7 +9,9 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=baeldung.com
 // @grant        none
 // ==/UserScript==
-let waitMills = 2000;
+let waitMills = 500;
+let totalCheckTimes = 200;
+let checkTimes = 0;
 (function() {
     'use strict';
 
@@ -19,6 +21,10 @@ let waitMills = 2000;
 })();
 
 function closeADWindow(){
+    if(checkTimes >= totalCheckTimes){
+        console.log("检测循环次数超过最大次数("+totalCheckTimes+"),脚本自动结束。")
+        return;
+    }
     let closeBtn = document.querySelector("button[tabindex][aria-label=Close]");
     if(closeBtn != null){
         closeBtn.click();
@@ -28,4 +34,5 @@ function closeADWindow(){
         console.log("未发现广告弹窗");
         setTimeout(closeADWindow, waitMills);
     }
+    checkTimes++;
 }
