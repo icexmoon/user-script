@@ -3,7 +3,7 @@
 // @namespace      cn.icexmoon.js
 // @description    增加豆瓣电影、图书，音乐的下载搜索链接
 // @author         icexmoon@qq.com
-// @version        3.0.7
+// @version        3.0.8
 // @license        MIT
 // @include        *//movie.douban.com/subject/*
 // @include        *//music.douban.com/subject/*
@@ -126,6 +126,7 @@ function run() {
 		{ html: "BT部落天堂", hasAnimationTV: true, hasForignMovie: true, hasChineseMovie: true, hasChineseTV: true, hasForignTV: true, href: "https://www.btbuluo.net/s/" + keyword1 + ".html" },
 		{ html: "人人影视", hasAnimationTV: false, hasForignMovie: true, hasChineseMovie: false, hasChineseTV: false, hasForignTV: true, href: "https://www.yysub.net/search?keyword=" + keyword1 },
 		{ html: "茶杯狐", hasAnimationTV: true, hasForignMovie: true, hasChineseMovie: true, hasChineseTV: true, hasForignTV: true, href: "https://www.cupfox.app/s/" + keyword1},
+		{ html: "皮皮虾", hasAnimationTV: true, hasForignMovie: true, hasChineseMovie: true, hasChineseTV: true, hasForignTV: true, href: "https://ppxzy.net/?s=" + keyword1},
 	];
 	var Online_links = [
 		{ html: "AGE动漫", hasAnimationTV: true, hasForignMovie: false, hasChineseMovie: false, hasChineseTV: false, hasForignTV: false, href: "https://donghua.agefans.com/search?query=" + keyword1 + "&page=1" },
