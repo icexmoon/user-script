@@ -3,7 +3,7 @@
 // @namespace      cn.icexmoon.js
 // @description    增加豆瓣电影、图书，音乐的下载搜索链接
 // @author         icexmoon@qq.com
-// @version        3.1.2
+// @version        3.1.3
 // @license        MIT
 // @include        *//movie.douban.com/subject/*
 // @include        *//music.douban.com/subject/*
@@ -62,7 +62,9 @@ function run() {
 	var Online_links = [
 		{ html: "AGE动漫", hasAnimationTV: true, hasForignMovie: false, hasChineseMovie: false, hasChineseTV: false, hasForignTV: false, href: "https://donghua.agefans.com/search?query=" + keyword1 + "&page=1" },
 		{ html: "影视仓", hasAnimationTV: true, hasForignMovie: true, hasChineseMovie: true, hasChineseTV: true, hasForignTV: true, href: "https://www.yingshicang.com/?auto_search_key=" + keyword2 },
-
+		{ html: "修罗影视", hasAnimationTV: true, hasForignMovie: true, hasChineseMovie: true, hasChineseTV: true, hasForignTV: true, href: "https://v.xlys.ltd.ua/search/" + keyword2 },
+		{ html: "剧馍馍", hasAnimationTV: true, hasForignMovie: true, hasChineseMovie: true, hasChineseTV: true, hasForignTV: true, href: "https://jumomo.cc/vodsearch/-------------.html?wd=" + keyword2 },
+		{ html: "5点电影", hasAnimationTV: true, hasForignMovie: true, hasChineseMovie: true, hasChineseTV: true, hasForignTV: true, href: "https://www.5.movie/vodsearch/-------------.html?wd=11" + keyword2 },
 	];
 
 	var Music_links = [
