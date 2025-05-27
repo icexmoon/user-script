@@ -3,7 +3,7 @@
 // @namespace      cn.icexmoon.js
 // @description    增加豆瓣电影、图书，音乐的下载搜索链接
 // @author         icexmoon@qq.com
-// @version        3.0.9
+// @version        3.1.0
 // @license        MIT
 // @include        *//movie.douban.com/subject/*
 // @include        *//music.douban.com/subject/*

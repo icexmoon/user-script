@@ -4,7 +4,7 @@
 // @namespace    cn.icexmoon.js
 // @license      MIT
 // @description  配合 douban=helper 实现自动展示搜索结果 
-// @version      1.0.1
+// @version      1.0.2
 // @match        https://www.yingshicang.com/*
 // @grant        none
 // ==/UserScript==
