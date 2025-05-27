@@ -3,12 +3,13 @@
 // @namespace      cn.icexmoon.js
 // @description    增加豆瓣电影、图书，音乐的下载搜索链接
 // @author         icexmoon@qq.com
-// @version        3.0.8
+// @version        3.0.9
 // @license        MIT
 // @include        *//movie.douban.com/subject/*
 // @include        *//music.douban.com/subject/*
 // @include        *//book.douban.com/subject/*
 // @require         http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js
+// @grant			GM_xmlhttpRequest
 // ==/UserScript==
 // 引用一个gb2312转码插件
 $URL = function () {
@@ -125,14 +126,15 @@ function run() {
 		{ html: "pan666", hasAnimationTV: true, hasForignMovie: true, hasChineseMovie: true, hasChineseTV: true, hasForignTV: true, href: "https://pan666.net/?q=" + keyword1 },
 		{ html: "BT部落天堂", hasAnimationTV: true, hasForignMovie: true, hasChineseMovie: true, hasChineseTV: true, hasForignTV: true, href: "https://www.btbuluo.net/s/" + keyword1 + ".html" },
 		{ html: "人人影视", hasAnimationTV: false, hasForignMovie: true, hasChineseMovie: false, hasChineseTV: false, hasForignTV: true, href: "https://www.yysub.net/search?keyword=" + keyword1 },
-		{ html: "茶杯狐", hasAnimationTV: true, hasForignMovie: true, hasChineseMovie: true, hasChineseTV: true, hasForignTV: true, href: "https://www.cupfox.app/s/" + keyword1},
-		{ html: "皮皮虾", hasAnimationTV: true, hasForignMovie: true, hasChineseMovie: true, hasChineseTV: true, hasForignTV: true, href: "https://ppxzy.net/?s=" + keyword1},
+		{ html: "茶杯狐", hasAnimationTV: true, hasForignMovie: true, hasChineseMovie: true, hasChineseTV: true, hasForignTV: true, href: "https://www.cupfox.app/s/" + keyword1 },
+		{ html: "皮皮虾", hasAnimationTV: true, hasForignMovie: true, hasChineseMovie: true, hasChineseTV: true, hasForignTV: true, href: "https://ppxzy.net/?s=" + keyword1 },
 	];
 	var Online_links = [
 		{ html: "AGE动漫", hasAnimationTV: true, hasForignMovie: false, hasChineseMovie: false, hasChineseTV: false, hasForignTV: false, href: "https://donghua.agefans.com/search?query=" + keyword1 + "&page=1" },
 		{ html: "电影狗", hasAnimationTV: true, hasForignMovie: true, hasChineseMovie: true, hasChineseTV: true, hasForignTV: true, href: "https://www.dianyinggou.com/so/" + keyword1 },
 		{ html: "电影港", hasAnimationTV: true, hasForignMovie: true, hasChineseMovie: true, hasChineseTV: true, hasForignTV: true, href: "https://www.dyg5.com/search.php?s=" + keyword1 },
-		{ html: "茶杯狐", hasAnimationTV: true, hasForignMovie: true, hasChineseMovie: true, hasChineseTV: true, hasForignTV: true, href: "https://www.cupfox.app/s/" + keyword1},
+		{ html: "茶杯狐", hasAnimationTV: true, hasForignMovie: true, hasChineseMovie: true, hasChineseTV: true, hasForignTV: true, href: "https://www.cupfox.app/s/" + keyword1 },
+		{ html: "影视仓", hasAnimationTV: true, hasForignMovie: true, hasChineseMovie: true, hasChineseTV: true, hasForignTV: true, href: "https://www.yingshicang.com/?auto_search_key=" + keyword2 },
 
 	];
 
@@ -316,3 +318,26 @@ function run() {
 }
 
 run()
+
+// 绕过影视仓的 referer 检测
+// document.querySelectorAll('a[href*="yingshicang.com"]').forEach(link => {
+// 	link.addEventListener('click', function (e) {
+// 		e.preventDefault();
+// 		const targetUrl = this.href;
+// 		console.log(targetUrl)
+
+// 		// 发送自定义请求
+// 		GM_xmlhttpRequest({
+// 			method: "GET",
+// 			url: targetUrl,
+// 			headers: {
+// 				"Referer": "https://www.yingshicang.com" // 伪装合法来源
+// 			},
+// 			onload: function (response) {
+// 				// 将响应内容注入新窗口或当前页面
+// 				const newWindow = window.open();
+// 				newWindow.document.write(response.responseText);
+// 			}
+// 		});
+// 	});
+// });
