@@ -1,8 +1,10 @@
 // ==UserScript==
 // @name         自动搜索助手
+// @author       icexmoon@qq.com
+// @namespace    cn.icexmoon.js
+// @license      MIT
 // @description  配合 douban=helper 实现自动展示搜索结果 
-// @namespace    cn.icexmoon
-// @version      1.0
+// @version      1.0.1
 // @match        https://www.yingshicang.com/*
 // @grant        none
 // ==/UserScript==
