@@ -4,7 +4,7 @@
 // @namespace    cn.icexmoon.js
 // @license      MIT
 // @description  配合 douban=helper 实现自动展示搜索结果 
-// @version      1.0.2
+// @version      1.0.3
 // @match        https://www.yingshicang.com/*
 // @grant        none
 // ==/UserScript==
@@ -45,11 +45,11 @@ function goSearch(keyword) {
     if (keyword) {
         // 等待页面加载完成
         window.addEventListener('load', function () {
-            // 等待 1 秒
+            // 等待 10 毫秒
             setTimeout((kw) => {
                 // console.log("匿名函数获取到keyword", kw)
                 goSearch(kw)
-            }, 500, keyword);
+            }, 10, keyword);
         });
     }
 
