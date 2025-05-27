@@ -49,7 +49,7 @@ function goSearch(keyword) {
             setTimeout((kw) => {
                 // console.log("匿名函数获取到keyword", kw)
                 goSearch(kw)
-            }, 1000, keyword);
+            }, 500, keyword);
         });
     }
 
